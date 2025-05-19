@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff8f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #ff4f5a;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  background-image: linear-gradient(to right, #ff4f5a, #ff8a00);
+}
+
+header h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3rem;
+  margin: 0;
+}
+
+header .tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+section {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #ff4f5a;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #ff8a00;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.booking-note {
+  background-color: #fff3f3;
+  border-left: 5px solid #ff4f5a;
+  padding: 15px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.package {
+  background: #ffe8dc;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.package:hover {
+  transform: scale(1.02);
+}
+
+.package h3 {
+  color: #d73737;
+  margin-top: 0;
+}
+
+.note {
+  background-color: #fff0d6;
+  border-left: 5px solid #ffa500;
+  padding: 15px;
+  font-style: italic;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 20px;
+  border-bottom: 5px solid #ff8a00;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .package {
+    font-size: 0.95rem;
+  }
+
+  iframe {
+    height: 500px;
+  }
+}
+
+.splatter-container {
+  position: absolute;
+  top: 100px;
+  left: -50px;
+  z-index: 0;
+  width: 200px;
+  height: 500px;
+  animation: splat-drop 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes splat-drop {
+  0% {
+    transform: translateY(-100px) scale(0.1) rotate(0deg);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(50px) scale(1.1) rotate(90deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) scale(1) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+.splatter path {
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+}
+
+.click-splatter {
+  position: absolute;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M47.4,-67.8C59.6,-61.6,66.9,-49.6,71.2,-36.9C75.5,-24.1,76.7,-10.5,76.6,3.3C76.5,17.1,75.1,30.9,68.3,42.2C61.5,53.6,49.3,62.4,36.3,69.3C23.3,76.1,9.7,80.9,-3.9,86.3C-17.5,91.7,-35,97.6,-47.7,92.3C-60.5,87,-68.6,70.5,-73.3,54.1C-78,37.7,-79.4,21.5,-81.3,4.2C-83.2,-13,-85.7,-31.5,-79.5,-45.6C-73.3,-59.8,-58.5,-69.6,-43.5,-74.9C-28.5,-80.2,-14.2,-81,0.8,-82.3C15.8,-83.7,31.6,-85.5,47.4,-67.8Z" transform="translate(50 50)"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  position: absolute;
+  animation: splatter-pop 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.click-splatter {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes splatter-pop {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
