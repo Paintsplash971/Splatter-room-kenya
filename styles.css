@@ -118,11 +118,11 @@ footer {
 
 .splatter-container {
   position: absolute;
-  top: 100px;
+  top: -100px;
   left: -50px;
   z-index: 0;
   width: 200px;
-  height: 500px;
+  height: 200px;
   animation: splat-drop 1s ease-out forwards;
   opacity: 0;
 }
