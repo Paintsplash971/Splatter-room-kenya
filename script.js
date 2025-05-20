@@ -17,14 +17,13 @@ document.getElementById('booking-form').addEventListener('submit', async functio
   const { data, error } = await supabase.from('bookings').insert([
     { name, email, date, time, package: selectedPackage }
   ]);
-
-  if (error) {
-    alert('There was an error submitting your booking.');
-    console.error(error);
-  } else {
-    document.getElementById('booking-form').reset();
-    document.getElementById('booking-success').style.display = 'block';
-  }
+if (error) {
+  alert('There was an error submitting your booking.');
+  console.error(error);
+} else {
+  document.getElementById('booking-form').reset();
+  document.getElementById('booking-success').style.display = 'block';
+}
 });
 document.addEventListener("click", function (e) {
   // Create a new div element for the splatter
@@ -58,7 +57,7 @@ document.addEventListener("click", function (e) {
   // Add the splatter to the document
   document.body.appendChild(splatter);
 
-  // Remove the splatter after 2 seconds
+  // Remove the splatter after 0.5 seconds
   setTimeout(function () {
     splatter.remove();
   }, 2000);
