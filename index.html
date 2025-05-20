@@ -42,7 +42,55 @@
   AOS.init();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Hamburger Button -->
+<div class="hamburger" onclick="toggleMobileMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+<!-- Mobile Menu -->
+<nav id="mobile-menu" class="mobile-nav hidden">
+  <a href="#home" onclick="toggleMobileMenu()">Home</a>
+  <a href="#packages" onclick="toggleMobileMenu()">Packages</a>
+  <a href="#booking" onclick="toggleMobileMenu()">Book</a>
+  <a href="#gallery" onclick="toggleMobileMenu()">Gallery</a>
+  <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+</nav>
 <body class="fade-in"></body>
+
+<!-- Hamburger Menu for Mobile -->
+<div class="hamburger" onclick="toggleMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+<!-- Mobile Navigation -->
+<nav id="mobile-nav" class="mobile-nav">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#packages" onclick="toggleMenu()">Packages</a>
+  <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+  <a href="#booking" onclick="toggleMenu()">Book</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</nav>
+
+<header id="home">
+  <nav class="navbar">
+    <div class="logo">Splatter Room Kenya</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#booking">Book</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Existing hero section starts here-->
+   <div id="float-container"></div>
+   <div class="splatter-container">
+    <!-- SVG and hero image go here...-->
+</header>
   <header>
     <div id="float-container"></div>
     <div class="splatter-container">
@@ -50,7 +98,7 @@
         <path fill="#ff4f5a" d="M47.4,-67.8C59.6,-61.6,66.9,-49.6,71.2,-36.9C75.5,-24.1,76.7,-10.5,76.6,3.3C76.5,17.1,75.1,30.9,68.3,42.2C61.5,53.6,49.3,62.4,36.3,69.3C23.3,76.1,9.7,80.9,-3.9,86.3C-17.5,91.7,-35,97.6,-47.7,92.3C-60.5,87,-68.6,70.5,-73.3,54.1C-78,37.7,-79.4,21.5,-81.3,4.2C-83.2,-13,-85.7,-31.5,-79.5,-45.6C-73.3,-59.8,-58.5,-69.6,-43.5,-74.9C-28.5,-80.2,-14.2,-81,0.8,-82.3C15.8,-83.7,31.6,-85.5,47.4,-67.8Z" transform="translate(100 100)" />
       </svg>
     </div>
-    <section class="hero">
+    <section id="home" class="hero">
     </section>
     <section class="hero">
   <img src="banner.jpg" alt="People splattering paint" class="hero-img">
@@ -80,7 +128,7 @@
       <li>Sunday: 12:30pm – 5:00pm</li>
     </ul>
   </section>
-<section class="packages">
+<section id="packages" class="packages">
   <div class="package" data-aos="zoom-in"></div>
   <h2>Pricing Packages</h2>
 
@@ -124,7 +172,7 @@
   </div>
 </section>
 
-<section class="testimonials">
+<section id="testimonials" class="testimonials">
   <h2>What Our Visitors Say</h2>
 
   <div class="testimonial" data-aos="fade-left">
@@ -152,11 +200,11 @@
     <p>Dress for mess! Wear a white t-shirt and stretchy pants. Bring extra clothes—you’ll be splattering in your own clothes!</p>
   </section>
 
-  <section class="booking">
+  <section id="booking" class="booking">
     <h2>Book Your Splatter Session</h2>
     
   </section>
-  <section class="gallery">
+  <section id="gallery" class="gallery">
   <h2>Splatter Moments</h2>
   <div class="swiper">
     <div class="swiper-wrapper">
@@ -177,6 +225,7 @@
     <p>We're located in Lavington opposite Photizo art gallery</p>
   </footer>
   <script type="module" src="script.js"></script>
-  <meta name="viewport" content="width=device=width, initial-scale=1.0">
+  <meta name="viewport" content="width=device=width, initial-scale=1.0"><footer id="contact">
+  <footer id="contact">
 </body>
 </html>
