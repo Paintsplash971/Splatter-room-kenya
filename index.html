@@ -90,6 +90,8 @@
    <div id="float-container"></div>
    <div class="splatter-container">
     <!-- SVG and hero image go here...-->
+     <!--overlay-->
+     <div id="menu-overlay" onclick="toggleMobileMenu()"></div>
 </header>
   <header>
     <div id="float-container"></div>
@@ -227,5 +229,14 @@
   <script type="module" src="script.js"></script>
   <meta name="viewport" content="width=device=width, initial-scale=1.0"><footer id="contact">
   <footer id="contact">
+    <script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('menu-overlay');
+
+    menu.classList.toggle('show');
+    overlay.classList.toggle('show');
+  }
+</script>
 </body>
 </html>
