@@ -5,19 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Splatter Room Kenya</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- AOS scroll animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+<style>
+  .float-dot {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: floatUp 12s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateY(-100vh) scale(1.2);
+      opacity: 0;
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<a href="https://wa.me/+254113930464" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp" />
+</a>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <body>
   <header>
+    <div id="float-container"></div>
     <div class="splatter-container">
       <svg class="splatter" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <path fill="#ff4f5a" d="M47.4,-67.8C59.6,-61.6,66.9,-49.6,71.2,-36.9C75.5,-24.1,76.7,-10.5,76.6,3.3C76.5,17.1,75.1,30.9,68.3,42.2C61.5,53.6,49.3,62.4,36.3,69.3C23.3,76.1,9.7,80.9,-3.9,86.3C-17.5,91.7,-35,97.6,-47.7,92.3C-60.5,87,-68.6,70.5,-73.3,54.1C-78,37.7,-79.4,21.5,-81.3,4.2C-83.2,-13,-85.7,-31.5,-79.5,-45.6C-73.3,-59.8,-58.5,-69.6,-43.5,-74.9C-28.5,-80.2,-14.2,-81,0.8,-82.3C15.8,-83.7,31.6,-85.5,47.4,-67.8Z" transform="translate(100 100)" />
       </svg>
     </div>
     <section class="hero">
-      <img src="banner.jpg" alt="People splattering paint" class="hero-img">
     </section>
-    <h1>PAINT SPLASH ZONE LAVINGTON ,KENYA</h1>
+    <section class="hero">
+  <img src="banner.jpg" alt="People splattering paint" class="hero-img">
+  <div class="hero-overlay">
+    <h1 class="hero-title">Unleash Your Inner Artist</h1>
+    <p class="hero-subtext">Kenya’s most colorful experience in Lavington</p>
+    <button onclick="document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth' });">
+      FUN
+  </div>
+   <h1>PAINT SPLASH ZONE LAVINGTON ,KENYA</h1>
     <p class="tagline">Let your imagination run wild!</p>
+</section>
   </header>
 
   
@@ -37,11 +82,13 @@
     </ul>
   </section>
 <section class="packages">
+  <div class="package" data-aos="zoom-in"></div>
   <h2>Pricing Packages</h2>
 
   <div class="package">
+    <div class="package card" data-aos="flip-left"></div>
     <h3>Package 1 – 1300 KES</h3>
-    <p><strong>Basic (45 minutes)</strong></p>
+    <p><strong> (45 minutes)</strong></p>
     <ul>
       <li>Canvas</li>
       <li>Painting supplies</li>
@@ -51,8 +98,9 @@
   </div>
 
   <div class="package">
+    <div class="package" data-aos="fade-up"></div>
     <h3>Package 2 – 2,000/=KES @</h3>
-    <p><strong>Plus (45 minutes)</strong></p>
+    <p><strong> (45 minutes)</strong></p>
     <ul>
       <li>Poncho (raincoat)</li>
       <li>Hairnet</li>
@@ -64,8 +112,9 @@
   </div>
 
   <div class="package">
+    <div class="package" data-aos="fade-up"></div>
     <h3>Package 3 – 3,000/=KES@</h3>
-    <p><strong>Premium (1 hour)</strong></p>
+    <p><strong> (1 hour)</strong></p>
     <ul>
       <li>Protective gear jumpsuit</li>
       <li>Hairnet</li>
@@ -74,6 +123,29 @@
       <li>Painting supplies</li>
     </ul>
   </div>
+</section>
+
+<section class="testimonials">
+  <h2>What Our Visitors Say</h2>
+
+  <div class="testimonial" data-aos="fade-left">
+    <img src="customer1.jpg" alt="Happy customer">
+    <p>"So much fun! My daughter didn’t want to leave!"<br><span>- Sarah, Karen</span></p>
+  </div>
+
+  <div class="testimonial" data-aos="fade-right">
+    <img src="customer2.jpg" alt="Happy customer">
+    <p>"The perfect birthday surprise. 10/10!"<br><span>- Brian, Lavington</span></p>
+  </div>
+</section>
+<section class="why-us" data-aos="fade-up">
+  <h2>Why Splatter Room Kenya?</h2>
+  <ul>
+    <li>✓ Totally unique experience in Nairobi</li>
+    <li>✓ Perfect for dates, birthdays & stress relief</li>
+    <li>✓ No art skills needed — just fun & creativity</li>
+    <li>✓ Family-friendly, safe and wildly fun!</li>
+  </ul>
 </section>
 
   <section class="note">
@@ -85,13 +157,24 @@
     <h2>Book Your Splatter Session</h2>
     
   </section>
+  <section class="gallery">
+  <h2>Splatter Moments</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="customer1.jpg" alt="Gallery Image 1" /></div>
+      <div class="swiper-slide"><img src="customer2.jpg" alt="Gallery Image 2" /></div>
+      <div class="swiper-slide"><img src="banner.jpg" alt="Gallery Image 3" /></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
 <p id="booking-success" style="display:none;color:green;">Booking confirmed!</p>
   <iframe src="https://forms.gle/3JxTdjXTSUoohrQG6" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
-
   <footer>
     <p>©️ 2025 Paint Splash Zone, Lavington | All Rights Reserved</p>
+    <p>Email - infosplatterroom@gmail.com $ Tel :+254113930464</p>
     <p>We're located in Lavington opposite Photizo art gallery</p>
   </footer>
   <script type="module" src="script.js"></script>
