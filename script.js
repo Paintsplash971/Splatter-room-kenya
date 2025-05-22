@@ -154,5 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 function toggleMobileMenu() {
   const menu = document.getElementById("mobile-menu");
-  menu.classList.toggle("hidden");
+  const hamburger = document.querySelector(".hamburger");
+  const overlay = document.getElementById("overlay");
+  menu.classList.toggle("show");
+  hamburger.classList.toggle("active");
+  overlay.classList.toggle("show");
 }
